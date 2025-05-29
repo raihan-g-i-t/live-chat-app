@@ -2,6 +2,7 @@
 
 namespace App\Events;
 
+use App\Models\User;
 use Illuminate\Broadcasting\Channel;
 use Illuminate\Broadcasting\InteractsWithSockets;
 use Illuminate\Broadcasting\PresenceChannel;
@@ -14,14 +15,15 @@ class MessageSent implements ShouldBroadcast
 {
     public $message;
 
-    public function __construct($message)
+    public function __construct(User $user, $message)
     {
         $this->message = $message;
+        $this->user = $user;
     }
 
     public function broadcastOn()
     {
-        return new Channel('chat');
+        return new PrivateChannel('chat');
     }
 
     public function broadcastWith()

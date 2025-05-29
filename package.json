@@ -20,7 +20,7 @@
         "vue": "^3.4.0"
     },
     "dependencies": {
-        "laravel-echo": "^2.0.2",
+        "laravel-echo": "^2.1.4",
         "pusher-js": "^8.4.0"
     }
 }

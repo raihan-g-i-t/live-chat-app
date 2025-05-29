@@ -3,6 +3,17 @@ import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout.vue';
 import { Head } from '@inertiajs/vue3';
 </script>
 
+
+window.Echo.private('chat')
+    .listen('MessageSent', (e) => {
+        console.log(`${e.user.name}: ${e.message}`);
+
+        // Example: add it to the chat window
+        const chatBox = document.getElementById('chat-box');
+        chatBox.innerHTML += `<div><strong>${e.user.name}:</strong> ${e.message}</div>`;
+    });
+
+
 <template>
     <Head title="Dashboard" />
 
@@ -21,7 +32,7 @@ import { Head } from '@inertiajs/vue3';
                     class="overflow-hidden bg-white shadow-sm sm:rounded-lg"
                 >
                     <div class="p-6 text-gray-900">
-                        You're logged in!
+                        You're logged in! rtytfhfgh
                     </div>
                 </div>
             </div>

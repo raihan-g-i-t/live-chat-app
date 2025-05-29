@@ -144,7 +144,7 @@ function handleImageError() {
                                         </h2>
 
                                         <p class="mt-4 text-sm/relaxed">
-                                            Laravel has wonderful documentation
+                                            Raihan -> Laravel has wonderful documentation
                                             covering every aspect of the
                                             framework. Whether you are a
                                             newcomer or have prior experience
